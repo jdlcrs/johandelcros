@@ -32,12 +32,11 @@ header {
     display: flex;
     align-items: center;
     background-color: lightblue;
-    padding: 0 100px;
+    padding: 0 200px;
 }
 
 #introduction {
     display: flex;
-    /* background-color: lightpink; */
     flex: 0 0 40%;
     max-height: 100px;
     font-family: 'Alegreya Sans', sans-serif;
@@ -45,8 +44,13 @@ header {
     /* padding: 1px 2px 3px 4px; */
 }
 
+.identity {
+    justify-content: center;
+    text-align: left;
+}
+
 .identity > p {
-    /* margin: 0; */
+    margin: 0 20px;
 }
 
 .identity > #name {
@@ -54,32 +58,78 @@ header {
     font-size: 40px;
 }
 
+.identity > #job {
+    color: #0099FF;
+}
+
 .photo img {
+    display: flex;
+    justify-content: center;
     height: auto;
     max-height: 80px;
     width: auto;
     max-width: 80px;
     margin-right: 20px;
-    margin-top: 10px;
+    margin-left: 20px;
     border-radius: 5px;
     box-shadow: 5px 5px 20px 5px lightgrey;
+}
+
+#section-title {
+    width: auto;
+    max-width: 100px;
+    display: flex;
+    justify-content: left;
+    font-family: 'Signika', sans-serif;
+}
+
+li {
+    list-style-type: none;
 }
 
 footer {
     font-family: 'Alegreya Sans', sans-serif;
     background-color: lightpink;
-    height: 50px;
+    height: 70px;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
-    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: space-around
+    justify-content: space-around;
+    box-shadow: 5px 5px 30px 5px lightgrey;
 }
 
-footer > h4 {
+.site {
+    max-height: 70px;
+}
+
+.contact {
+    max-height: 70px;
+}
+
+.site > h4 {
+    font-size: 15px;
+    margin: 4px 0;
+    padding: 0 0;
+}
+
+.site > p {
     font-size: 10px;
-    margin: 10 0 10 0;
+    margin: 0 0;
+    padding: 0 0;
+    color: #0099FF;
+}
+
+.contact > h4 {
+    font-size: 15px;
+    margin: 4px 0;
+    padding: 0 0;
+}
+
+.contact > p {
+    font-size: 10px;
+    margin: 0 0;
+    padding: 0 0;
+    color: #0099FF;
 }
