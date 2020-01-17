@@ -3,7 +3,18 @@ body, p {
     margin: 0;
 }
 
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightsalmon;
+    display: flex;
+    flex-direction: column;
+}
+
 header {
+    flex: 0 0 15%;
+    width: 100vw;
+    background-color: lightskyblue;
     padding: 0;
     margin: 0;
     display: flex;
@@ -39,8 +50,9 @@ header {
 */
 
 #introduction {
-    display: flex;
-    flex: 0 0 40%;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    background-color: red;
     max-height: 100px;
     font-family: 'Alegreya Sans', sans-serif;
     /* up right down left */
@@ -81,7 +93,9 @@ header {
 #section-title {
     width: auto;
     max-width: 100px;
-    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+    background-color: blue;    
     justify-content: left;
     font-family: 'Signika', sans-serif;
 }
@@ -90,14 +104,21 @@ li {
     list-style-type: none;
 }
 
+.section-content {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+        background-color: green;
+}
+
 footer {
     font-family: 'Alegreya Sans', sans-serif;
-    background-color: lightpink;
     height: 70px;
+    width: 100vw;
+    background-color: lightgreen;
     position: fixed;
     bottom: 0;
     width: 100%;
-    display: flex;
+    flex: 0 0 10%;
     align-items: center;
     justify-content: space-around;
     box-shadow: 5px 5px 30px 5px lightgrey;
@@ -135,4 +156,32 @@ footer {
     margin: 0 0;
     padding: 0 0;
     color: #0099FF;
+}
+
+@media (max-width: 500px) {
+    .header, .footer {
+        flex: 0 0 8%;
+    }
+
+    .content {
+        width: 100vw;
+        flex: 0 0 84%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #introduction, #section-title, .section-content {
+        display: block;
+        width: 100%;
+    }
+
+    #introduction, #section-title {
+        height: 10%;
+    }
+
+    .section-content {
+        height: 80%;
+    }
 }
